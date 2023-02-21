@@ -1,0 +1,99 @@
+Q1 . 1. In the below elements which of them are values or an expression? eg:- values can be
+integer or string and expressions will be mathematical operators.
+*
+&#39;hello&#39;
+-87.8
+-
+/
++
+
+Ans - * = expression
+hello = value
+-87.8 = value
+- = expression
+/ = expression
++ = expression
+
+Q2. What is the difference between string and variable?
+
+Ans - String is basically a data type whereas variable is used to hold any value which can ve string , integer , character etc .
+For ex- in python - name = 'Srishti' , so here name is a variable which is holding a string whose value is "Srishti"
+
+Q3. Describe three different data types.
+Ans Integer: An integer is a data type that represents whole numbers (positive, negative, or zero) without a fractional part.For example, a 32-bit integer can represent values from -2,147,483,648 to 2,147,483,647.
+
+String: A string is a data type that represents text. A string is a sequence of characters that are enclosed in quotation marks. Strings can contain letters, numbers, and symbols. They are commonly used for storing and manipulating textual data, such as names, addresses, and messages.
+
+Boolean: A boolean is a data type that represents a logical value, which can be either true or false. Booleans are commonly used in conditional statements, loops, and other logical operations.
+
+Q4. What is an expression made up of? What do all expressions do?
+An expression is a combination of values, variables, operators, and/or function calls that can be evaluated to produce a resulting value.
+Expressions are used to perform various operations and calculations in a program, such as arithmetic calculations, logical operations, comparisons, and more. 
+Expressions can be composed of various elements, including:
+The primary purpose of an expression is to produce a resulting value that can be used in further calculations, assignments, or comparisons
+
+Q5. This assignment statements, like spam = 10. What is the difference between an
+expression and a statement?
+
+Ans. In programming, an expression is a combination of values, variables, operators, and function calls that can be evaluated to produce a resulting value. Expressions can be used within statements to perform various operations and calculations.
+
+On the other hand, a statement is a complete line of code that performs a specific action or set of actions. A statement typically includes one or more expressions, but it can also include control structures (like if/else statements, for loops, and while loops), function declarations, and other constructs that perform specific tasks.
+
+An assignment statement, such as spam = 10, is an example of a statement. It assigns a value of 10 to the variable spam. This statement doesn't produce any value, but it does have an effect on the state of the program by storing a value in a variable.
+
+In contrast, an expression is evaluated to produce a value. For example, spam + 5 is an expression that produces a value of 15 if spam has a value of 10. Expressions can be used within statements, such as in an assignment statement like spam = spam + 5.
+
+In summary, while both expressions and statements are important parts of programming, an expression is a piece of code that produces a value, while a statement is a complete line of code that performs a specific action or set of actions, including the assignment of values to variables.
+
+
+Q6. After running the following code, what does the variable bacon contain?
+bacon = 22
+bacon + 1
+
+Ans . After running the given code, the variable "bacon" contains the integer value 22.
+The second line of code adds 1 to the value of "bacon" but does not assign the new value to the variable. So if you were to print the value of "bacon" after running the code, it would still be 22. If you want to update the value of "bacon" to reflect the addition of 1, you would need to reassign the result to the variable, like this:
+bacon = 22
+bacon = bacon + 1
+print(bacon)  # Output: 23
+
+Q7. What should the values of the following two terms be?
+'spam' + 'spamspam'
+'spam' * 3
+
+Ans The values of the two terms are as follows:
+
+'spam' + 'spamspam' evaluates to 'spamspamspam'. This is because the '+' operator concatenates the two strings 'spam' and 'spamspam', resulting in a single string 'spamspamspam'.
+
+'spam' * 3 evaluates to 'spamspamspam'. This is because the '*' operator repeats the string 'spam' three times, resulting in a single string 'spamspamspam'.
+
+Q8. Why is eggs a valid variable name while 100 is invalid?
+Ans. In Python, variable names must follow certain rules. Specifically, variable names must:
+1. Start with a letter or an underscore (_).
+2. Consist of only letters, numbers, and underscores.
+3. Not be a reserved keyword in Python.
+Based on these rules, 'eggs' is a valid variable name because it starts with a letter ('e') and consists only of letters. On the other hand, '100' is not a valid variable name because it starts with a number ('1'), and variable names cannot start with a number in Python.
+
+It's worth noting that '100' could be used as a variable name if it were preceded by a letter or an underscore, such as '_100' or 'x100'. However, using numbers in variable names can make the code more difficult to read and understand, so it's generally best to stick to letters and underscores.
+
+Q10 What three functions can be used to get the integer, floating-point number, or string
+version of a value? 
+
+Ans In Python, the following three built-in functions can be used to get the integer, floating-point number, or string version of a value:
+
+int() - This function can be used to convert a value to an integer. For example, int(3.14) would return 3, since the integer version of 3.14 is 3.
+
+float() - This function can be used to convert a value to a floating-point number. For example, float(42) would return 42.0, since the floating-point version of 42 is 42.0.
+
+str() - This function can be used to convert a value to a string. For example, str(3.14) would return '3.14', since the string version of 3.14 is the string '3.14'.
+
+Note that these functions can only be used to convert values that are compatible with the target data type. For example, you can't use int() to convert the string 'hello' to an integer, since 'hello' is not a numeric value.
+
+Q10. Why does this expression cause an error? How can you fix it?
+'I have eaten ' + 99 + 'burritos'
+
+Ans. The expression 'I have eaten ' + 99 + 'burritos' causes an error because you are trying to concatenate a string ('I have eaten ') with an integer (99) using the '+' operator, which is not allowed in Python.
+
+To fix this error, you need to convert the integer to a string before concatenating it with the other strings. One way to do this is to use the str() function to convert the integer to a string, like this:
+
+'I have eaten ' + str(99) + ' burritos'
+
