@@ -1,0 +1,145 @@
+Q1. What is the purpose of Python's OOP?
+Ans. The purpose of Python's Object-Oriented Programming (OOP) is to provide a way to organize and structure code in a more modular, reusable, and maintainable way. OOP allows you to define objects that have properties (attributes) and behaviors (methods) that are related to each other, and to create new objects based on these definitions.
+
+Q2. Where does an inheritance search look for an attribute?
+Ans. When a Python program tries to access an attribute on an object that belongs to a class that uses inheritance, Python searches for the attribute in the object's class and its base classes, according to the method resolution order (MRO) of the class
+
+Q3. How do you distinguish between a class object and an instance object?
+
+Ans. In Python, a class is a blueprint for creating objects, while an instance is a specific object created from a class. Here's an example that demonstrates the difference between a class and an instance:
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def say_hello(self):
+        print(f"Hello, my name is {self.name} and I am {self.age} years old.")
+        
+# Create an instance of the Person class
+p = Person("Alice", 30)
+
+# Call the say_hello method on the instance object
+p.say_hello()  # Output: "Hello, my name is Alice and I am 30 years old."
+
+In this example, we define a Person class with an __init__ method that takes a name and an age parameter and initializes instance variables with these values. The class also has a say_hello method that prints a greeting message using the instance variables.
+
+We then create an instance of the Person class using the Person("Alice", 30) syntax. This creates a new object in memory that has the name attribute set to "Alice" and the age attribute set to 30.
+
+Finally, we call the say_hello method on the instance object (p.say_hello()), which prints the greeting message using the instance variables.
+
+Q4. What makes the first argument in a class’s method function special?
+n Python, the first argument of a class method is conventionally named self. This argument refers to the instance of the class on which the method is being called. It is a reference to the object that was created from the class and is used to access the instance variables and methods of the object.
+
+Ans. The self argument is automatically passed in by Python when a method is called on an instance object. When you call a method on an instance object, Python automatically passes the instance object as the first argument to the method, and you can access the instance variables and methods using the self argument.
+
+For example, consider the following class definition:
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+        
+    def say_hello(self):
+        print(f"Hello, my name is {self.name}.")
+In this example, the __init__ method takes a name argument and initializes the name instance variable using the self argument. The say_hello method takes no arguments, but uses the self argument to access the name instance variable.
+
+When you create an instance of the Person class and call the say_hello method on it, Python automatically passes the instance object as the first argument to the say_hello method, so you can access the name instance variable using the self.name syntax:
+p = Person("Alice")
+p.say_hello()  # Output: "Hello, my name is Alice."
+
+In summary, the self argument is a reference to the instance object on which the method is being called, and is used to access the instance variables and methods of the object. It is conventionally named self in Python.
+
+Q5. What is the purpose of the __init__ method?
+Ans. The __init__ method is a special method in Python classes that is used to initialize the instance variables of an object when it is created. It is also known as the constructor method of a class.
+
+The purpose of the __init__ method is to set up the initial state of the object. When a new object is created from a class, Python automatically calls the __init__ method with the newly created object as the first argument (conventionally named self).
+
+Inside the __init__ method, you can define instance variables and set their initial values. Instance variables are unique to each object of the class, and can be accessed using the self keyword.
+
+Q6. What is the process for creating a class instance?
+
+Ans. To create an instance of a class in Python, you need to follow these steps:
+
+Define the class: First, you need to define the class with the class keyword. The class defines the blueprint for creating objects, and includes the instance variables and methods that will be available to each object.
+
+Create an instance of the class: To create an instance of the class, you need to call the class like a function, passing any required arguments. This will create a new object of the class and return a reference to it.
+
+Assign the instance to a variable: You need to assign the new instance to a variable so that you can refer to it later.
+
+Here is an example that demonstrates these steps:
+
+# Define the class
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def say_hello(self):
+        print(f"Hello, my name is {self.name} and I am {self.age} years old.")
+
+# Create an instance of the class
+p = Person("Alice", 25)
+
+# Call a method on the instance
+p.say_hello()
+In this example, we define a Person class with an __init__ method and a say_hello method. We then create an instance of the class by calling the class like a function with two arguments, "Alice" and 25. We assign the resulting object to a variable p.
+
+We can then call the say_hello method on the p object, which will print a message with the person's name and age.
+
+In summary, to create an instance of a class in Python, you need to define the class, create an instance of the class by calling it like a function, passing any required arguments, and assign the resulting object to a variable.
+
+Q7. What is the process for creating a class?
+
+Ans. To create a class in Python, you need to follow these steps:
+
+Define the class: Use the class keyword followed by the name of the class, which by convention should start with a capital letter. Inside the class block, define the attributes (instance variables) and methods (functions) of the class.
+
+Define the constructor: The constructor is a special method that is called when an object is created from the class. It initializes the object's instance variables. In Python, the constructor is named __init__.
+
+Define other methods: Define other methods as necessary to provide functionality for the class.
+
+Here's an example of how to create a simple class in Python:
+
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def get_make(self):
+        return self.make
+
+    def get_model(self):
+        return self.model
+
+    def get_year(self):
+        return self.year
+
+    def get_age(self):
+        return 2023 - self.year
+
+Q8. How would you define the superclasses of a class?
+Ans. In Python, you can define a subclass (or derived class) by inheriting from one or more parent classes (or base classes). The parent classes are also known as superclasses.
+
+To define the superclass of a class, you simply list the parent classes in the class definition using the () after the class name. Here's an example:
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def eat(self):
+        print(f"{self.name} is eating...")
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name)
+        self.breed = breed
+
+    def bark(self):
+        print(f"{self.name} ({self.breed}) is barking...")
+
+dog1 = Dog("Fido", "Labrador")
+dog1.eat()
+dog1.bark()
+In this example, we define two classes: Animal and Dog. Dog is a subclass of Animal, which makes Animal the superclass of Dog. The Dog class inherits the __init__ method from Animal using the super() function, and adds a new instance variable breed and a new method bark.
+
+When you create an instance of Dog (dog1), you can see that it has both the eat method from the Animal superclass and the bark method from the Dog subclass.
