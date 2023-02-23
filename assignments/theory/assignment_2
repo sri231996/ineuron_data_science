@@ -1,0 +1,158 @@
+Q1. What are the two values of the Boolean data type? How do you write them?
+Ans. The two values of the Boolean data type are "true" and "false". In Python, the keywords "True" and "False" are used to represent these values.
+
+Q2. What are the three different types of Boolean operators?
+Ans. The three different types of Boolean operators are:
+
+AND: The "AND" operator is used to combine two or more conditions, and the resulting expression is true only if all the conditions are true. It is often represented by the symbol "&&".
+
+OR: The "OR" operator is used to combine two or more conditions, and the resulting expression is true if at least one of the conditions is true. It is often represented by the symbol "||".
+
+NOT: The "NOT" operator is used to invert the value of a Boolean expression. If the expression is true, the "NOT" operator will return false, and if the expression is false, the "NOT" operator will return true. It is is often represented by the symbol "!".
+
+Q3. Make a list of each Boolean operator's truth tables (i.e. every possible combination of Boolean
+values for the operator and what it evaluate ).
+
+Ans. 
+
+AND truth table:
+A	B	A AND B
+0	0	0
+0	1	0
+1	0	0
+1	1	1
+
+OR truth table:
+A	B	A OR B
+0	0	0
+0	1	1
+1	0	1
+1	1	1
+
+NOT truth table:
+A	NOT A
+0	1
+1	0
+
+
+Q4. What are the values of the following expressions?
+
+Ans. (5 &gt; 4) and (3 == 5) - False
+not (5 &gt; 4) - False
+(5 &gt; 4) or (3 == 5) - True
+not ((5 &gt; 4) or (3 == 5)) - False
+(True and True) and (True == False) - False 
+(not False) or (not True) - True 
+
+Q5. What are the six comparison operators?
+
+Ans . 
+The six comparison operators are:
+
+Equal to (==)
+The equal to operator (==) checks if two values are equal. It returns true if both values are equal, and false if they are not equal.
+
+Not equal to (!=)
+The not equal to operator (!=) checks if two values are not equal. It returns true if the values are different, and false if they are equal.
+
+Greater than (>)
+The greater than operator (>) checks if one value is greater than another. It returns true if the first value is greater than the second value, and false if it is not.
+
+Less than (<)
+The less than operator (<) checks if one value is less than another. It returns true if the first value is less than the second value, and false if it is not.
+
+Greater than or equal to (>=)
+The greater than or equal to operator (>=) checks if one value is greater than or equal to another. It returns true if the first value is greater than or equal to the second value, and false if it is not.
+
+Less than or equal to (<=)
+The less than or equal to operator (<=) checks if one value is less than or equal to another. It returns true if the first value is less than or equal to the second value, and false if it is not.
+
+
+Q6. How do you tell the difference between the equal to and assignment operators?Describe a
+condition and when you would use one.
+Ans The equal to operator (==) and the assignment operator (=) are two different operators in programming languages. Here's how you can differentiate between them:
+
+Equal to operator (==): The equal to operator is a comparison operator that checks if two values are equal. It returns a Boolean value (true or false) depending on the comparison. For example, the expression "5 == 5" will return true, while the expression "5 == 6" will return false.
+
+Assignment operator (=): The assignment operator is used to assign a value to a variable. It sets the value of a variable to a given value. For example, the expression "x = 5" will set the value of variable x to 5.
+
+A condition where you would use the equal to operator is when you need to compare two values or variables to check if they are equal. For example, if you want to check if a user input matches a predefined value, you can use the equal to operator.
+
+A condition where you would use the assignment operator is when you need to set the value of a variable to a specific value. For example, if you want to set the value of a counter variable to zero before starting a loop, you can use the assignment operator.
+
+
+Q7. Identify the three blocks in this code:
+
+Ans. Based on the indentation, there are three blocks in this code:
+
+Block 1:
+spam = 0
+if spam == 10:
+    print('eggs')
+This block sets the value of the variable spam to 0 and then checks if spam is equal to 10. Since spam is not equal to 10, the print('eggs') statement is not executed.
+
+Block 2:
+if spam > 5:
+    print('bacon')
+else:
+    print('ham')
+This block checks if spam is greater than 5. Since spam is not greater than 5 (it is equal to 0), the else block is executed and ham is printed.
+
+Block 3:
+print('spam')
+print('spam')
+This block simply prints the strings spam and spam to the console.
+
+
+Q8. Write code that prints Hello if 1 is stored in spam, prints Howdy if 2 is stored in spam, and prints
+Greetings! if anything else is stored in spam.
+
+Ans. spam = 3
+if spam == 1:
+    print('Hello')
+elif spam == 2:
+    print('Howdy')
+else:
+    print('Greetings!')
+    
+Q9. If your programme is stuck in an endless loop, what keys you’ll press?
+Ans. Ctrl+C
+
+Q10.How can you tell the difference between break and continue?
+Ans break is used to exit a loop prematurely, while continue is used to skip over the current iteration of a loop and move on to the next iteration.
+
+Q11. In a for loop, what is the difference between range(10), range(0, 10), and range(0, 10, 1)?
+
+Ans. In a for loop, range(10), range(0, 10), and range(0, 10, 1) all produce the same sequence of integers, from 0 to 9 inclusive. However, the way they specify the sequence differs slightly:
+
+range(10): This specifies a sequence that starts from 0 (which is the default starting value) and ends at 10 (exclusive) with a step of 1 (which is the default step). In other words, it generates the sequence [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].
+
+range(0, 10): This specifies a sequence that starts from 0 (the starting value specified) and ends at 10 (exclusive) with a step of 1 (the default step). In other words, it generates the sequence [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], which is the same as range(10).
+
+range(0, 10, 1): This specifies a sequence that starts from 0 (the starting value specified), ends at 10 (exclusive), and has a step of 1 (the step value specified). In other words, it generates the sequence [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], which is the same as range(10) and range(0, 10).
+
+Q12. Write a short program that prints the numbers 1 to 10 using a for loop. Then write an equivalent
+program that prints the numbers 1 to 10 using a while loop.
+
+1st Code
+for a in range(1,11):
+ print(a)
+
+2nd Code
+b=1
+while(b<=10):
+ print(b)
+ b=b-1
+
+Q13. If you had a function named bacon() inside a module named spam, how would you call it after
+importing spam?
+
+Ans. # Import the spam module
+import spam
+
+# Call the bacon function within the spam module
+spam.bacon()
+
+
+
+
