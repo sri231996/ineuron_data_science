@@ -1,3 +1,4 @@
+Q significance of host 0.0.0.0 and 127.0.0.1
 Both 0.0.0.0 and 127.0.0.1 are IP addresses used in computer networking, but they have different meanings and uses.
 
 0.0.0.0
@@ -12,3 +13,23 @@ For example, if a web server is running on a machine, a developer can test the s
 
 In summary, 0.0.0.0 is used to refer to all available IP addresses on a machine, while 127.0.0.1 is used to refer to the local machine's network interface.
 
+Q. why we do if(__name__)=='__main__' ?
+The if __name__ == '__main__': statement is a common construct in Python programming used to ensure that a block of code is only executed when the Python script is run directly, and not when it is imported as a module in another script.
+
+In Python, when you import a module, the code in that module is executed immediately. This means that if your Python script contains some code that you only want to run when it's the main program, you need to put that code inside an if __name__ == '__main__': block. This block of code will only be executed when the script is run directly.
+
+For example, suppose you have a Python script called my_script.py, and it contains the following code:
+
+def my_function():
+    print("Hello, world!")
+
+if __name__ == '__main__':
+    my_function()
+When you run the my_script.py script from the command line with python my_script.py, the my_function() function will be executed and "Hello, world!" will be printed to the console. However, if you import the my_script module in another script, the my_function() function will not be executed.
+
+python
+Copy code
+import my_script
+
+# The following line will not print anything because my_function is not called
+By using the if __name__ == '__main__': block, you can ensure that code that you only want to run when the script is the main program will not be executed when the script is imported as a module in another script.
