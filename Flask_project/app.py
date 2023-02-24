@@ -5,6 +5,11 @@ app = Flask(__name__)
 # In Flask, app = Flask(__name__) creates a new instance of the Flask class, which is the central class in a Flask application. The __name__ parameter is used to determine the name of the application's module or package.
 
 # When you create a Flask instance using Flask(__name__), Flask uses the __name__ parameter to locate the application's resources, such as templates and static files. By default, Flask assumes that these resources are located in a directory named templates and a directory named static that are located in the same directory as the application module or package.
+# In Flask, the line of code "app = Flask(name)" creates an instance of the Flask class, and the "name" parameter is a special variable in Python that refers to the name of the current module.
+
+The "name" parameter is used to specify the name of the application package. This is important because Flask uses the name of the package to locate resources such as templates and static files. If the name parameter is not provided, Flask may not be able to locate these resources correctly.
+
+When Flask creates an instance of the application, it needs to know where to find other parts of the application, such as templates and static files. By passing "name" as the argument to the Flask constructor, Flask uses the name of the current module (the file in which this code appears) to locate these resources. This is why it's important to provide the name parameter when creating a Flask application
 
 # Route (for handling any request)
 @app.route("/")
