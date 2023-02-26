@@ -1,0 +1,93 @@
+What is SQL?
+SQL (Structured Query Language) is a programming language used to manage relational databases. It allows you to create, modify, and query databases.
+
+Basic syntax:
+
+SELECT: retrieves data from one or more tables
+FROM: specifies the table(s) to retrieve data from
+WHERE: filters the data based on a condition
+ORDER BY: sorts the data in ascending or descending order
+GROUP BY: groups the data based on one or more columns
+JOIN: combines data from multiple tables based on a related column
+Data types:
+CHAR and VARCHAR: store character strings
+INT: stores integers
+FLOAT and DOUBLE: store floating-point numbers
+DATE and TIME: store dates and times
+BOOLEAN: stores true/false values
+Basic queries:
+SELECT * FROM table_name: retrieves all columns from a table
+SELECT column_name FROM table_name: retrieves specific columns from a table
+SELECT column_name FROM table_name WHERE condition: filters data based on a condition
+SELECT COUNT(*) FROM table_name: returns the number of rows in a table
+SELECT DISTINCT column_name FROM table_name: returns unique values in a column
+SELECT column_name FROM table_name ORDER BY column_name ASC/DESC: sorts data in ascending or descending order
+Advanced queries:
+INNER JOIN: returns only the rows where there is a match in both tables
+OUTER JOIN: returns all rows from both tables, and where there is no match in one of the tables, returns NULL values
+SUBQUERY: a query within a query, used to filter data based on the results of another query
+UNION: combines the results of two or more SELECT statements
+
+
+To connect SQL with Python, you can use a Python library such as pyodbc, pymysql, or sqlite3. Here are the general steps:
+
+Install the appropriate library for your SQL database. For example, if you are using MySQL, you can install pymysql using pip:
+
+Copy code
+pip install pymysql
+Import the library in your Python script:
+
+python
+Copy code
+import pymysql
+Establish a connection to your SQL database using the connect() method:
+
+sql
+Copy code
+connection = pymysql.connect(
+    host='localhost',
+    user='username',
+    password='password',
+    db='database_name'
+)
+Replace localhost, username, password, and database_name with the appropriate values for your database.
+
+Create a cursor object using the cursor() method:
+
+
+cursor = connection.cursor()
+Execute SQL commands using the execute() method on the cursor object:
+
+
+cursor.execute('SELECT * FROM table_name')
+Retrieve the results using methods like fetchall() or fetchone():
+
+
+results = cursor.fetchall()
+Close the cursor and connection:
+
+
+cursor.close()
+connection.close()
+Here's a complete example for connecting to a MySQL database and retrieving data:
+
+
+import pymysql
+
+connection = pymysql.connect(
+    host='localhost',
+    user='username',
+    password='password',
+    db='database_name'
+)
+
+cursor = connection.cursor()
+
+cursor.execute('SELECT * FROM table_name')
+results = cursor.fetchall()
+
+for row in results:
+    print(row)
+
+cursor.close()
+connection.close()
