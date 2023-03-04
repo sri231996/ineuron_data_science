@@ -1,0 +1,17 @@
+A1. Classes and modules are both constructs in Python used for organizing code, but they serve different purposes. Classes define objects and their behavior, while modules are used to organize related code and data.
+
+A2. To make instances in Python, you first need to define a class. Once a class is defined, you can create instances of that class using the class name followed by parentheses. For example, if you have a class called Car, you can create an instance of that class using my_car = Car(). To define a class in Python, you use the class keyword followed by the class name and a colon.
+
+A3. Class attributes should be created inside the class definition but outside any methods. They are typically defined at the top of the class, before any methods are defined. Class attributes are shared by all instances of the class.
+
+A4. Instance attributes are created inside the class methods, typically the __init__ method. Instance attributes are specific to each instance of the class.
+
+A5. In Python, self refers to the instance of the class that a method is being called on. It is a convention in Python to use self as the first parameter name in instance methods.
+
+A6. Python classes handle operator overloading through special methods that are defined with names that start and end with double underscores (e.g. __add__ for the addition operator). These methods define the behavior of the class when the corresponding operator is used.
+
+A7. Operator overloading should be considered when you want to make your class behave like a built-in type. For example, if you want to define a custom object that can be added, subtracted, multiplied, or divided like a number, you can use operator overloading to define the behavior of those operations.
+
+A8. The most popular form of operator overloading in Python is probably the arithmetic operators (+, -, *, /, etc.), followed by comparison operators (<, <=, ==, !=, >, >=).
+
+A9. The two most important concepts to grasp in order to comprehend Python OOP code are classes and objects. A class is a blueprint for creating objects, and an object is an instance of a class. To work with object-oriented code in Python, you need to understand how classes are defined, how objects are created from those classes, and how methods and attributes are defined and accessed.
