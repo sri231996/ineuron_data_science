@@ -1,0 +1,9 @@
+A1. To support iteration, you can use the __iter__ and __next__ methods for classes. The __iter__ method returns an iterator object, and the __next__ method returns the next value in the iteration.
+
+A2. The __str__ and __repr__ methods are used to manage printing in different contexts. The __str__ method returns a string representation of the object, which is intended to be readable for humans, while the __repr__ method returns a string representation of the object that is more intended for developers and debugging.
+
+A3. To intercept slice operations, you can use the __getitem__ method with a slice object. The __getitem__ method is called when an object is accessed using the square bracket notation, and if the argument is a slice object, the method is called with the slice object as its argument.
+
+A4. To capture in-place addition, you can use the __iadd__ method. The __iadd__ method is called when the += operator is used with an object of the class, and it should modify the object in place.
+
+A5. Operator overloading should be used when it makes the code more readable and intuitive. For example, overloading the + operator for a custom class that represents a mathematical object can make the code using that class more readable and closer to mathematical notation. However, overusing operator overloading can make the code harder to understand, so it should be used judiciously.
