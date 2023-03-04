@@ -1,0 +1,11 @@
+A1. Multiple inheritance is a feature of object-oriented programming languages that allows a class to inherit from multiple parent classes. This means that a class can have the properties and methods of more than one parent class, allowing for greater flexibility in designing class hierarchies.
+
+A2. Delegation is a design pattern in object-oriented programming where an object forwards some of its responsibilities to another object. In delegation, the delegating object maintains a reference to the delegated object and calls its methods when needed. This can be useful for reusing code, separating concerns, and reducing the complexity of the delegating object.
+
+A3. Composition is a design pattern in object-oriented programming where a class is composed of other objects, rather than inheriting from them. This allows for greater flexibility in designing class hierarchies, as classes can be composed of smaller, more specialized objects, rather than inheriting from larger, more general-purpose classes.
+
+A4. Bound methods are methods that are attached to a specific instance of a class. They are created when a method is called on an instance of a class, and the instance is automatically passed as the first argument to the method. Bound methods are used to modify the state of an object, or to perform some action that depends on the state of the object.
+
+A5. Pseudoprivate attributes are a convention in Python where attributes with a double underscore prefix are "name-mangled" to avoid naming conflicts with subclasses. These attributes are not truly private, as they can still be accessed using their mangled name, but they are intended to be used only within the class and its subclasses. The purpose of pseudoprivate attributes is to prevent accidental modification of internal attributes by external code, and to allow subclasses to override or extend the behavior of the class without affecting its internal implementation.
+
+
